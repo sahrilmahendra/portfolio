@@ -4,12 +4,29 @@ html {
 
 body {
     margin-bottom: 100px;
-    margin-top: 30px;
+    margin-top: 10px;
+}
+
+.jumbotron {
+    height: 460px;
+    background-image: url('../img/bg-jumbotron.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: 0 -45px;
+    color: #eaeaea;
+    overflow: hidden;
+}
+
+.jumbotron h1,
+.jumbotron p,
+.jumbotron h2 {
+    text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.6);
 }
 
 .jumbotron img {
     width: 200px;
-    border: 5px solid #666;
+    border: 5px solid #eaeaea;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.6);
 }
 
 hr {
@@ -21,8 +38,32 @@ section {
     min-height: 400px;
 }
 
+.pKiri,
+.pKanan {
+    opacity: 0;
+    transform: translate(0, 0);
+    transition: 1s;
+}
+
+.pKiri.pMuncul,
+.pKanan.pMuncul {
+    opacity: 1;
+    transform: 0, 0;
+}
+
 .portfolio {
     background-color: #eee;
+}
+
+.portfolio .thumbnail {
+    opacity: 0;
+    transform: translate(0, -40px);
+    transition: 1s;
+}
+
+.portfolio .thumbnail.muncul {
+    opacity: 1;
+    transform: translate(0, 0);
 }
 
 .contact {
